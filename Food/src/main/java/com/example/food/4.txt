@@ -1,0 +1,2 @@
+Food: Chicken Burger###Per Price: 250###Quantity: 4###Price: 1000
+Food: Pasta###Per Price: 170###Quantity: 2###Price: 340
