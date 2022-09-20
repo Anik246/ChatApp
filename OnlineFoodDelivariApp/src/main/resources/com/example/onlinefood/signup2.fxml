@@ -59,7 +59,7 @@
             <String fx:value="shadow" />
          </styleClass>
         </TextField>
-        <Label layoutX="136.0" layoutY="191.0" text="Card Number" textFill="#5b3b3b" />
+        <Label fx:id="cname" layoutX="136.0" layoutY="191.0" prefHeight="17.0" prefWidth="144.0" text="Card Number" textFill="#5b3b3b" />
         <Label layoutX="137.0" layoutY="262.0" text="Expiration Date" />
         <ImageView fitHeight="51.0" fitWidth="49.0" layoutX="14.0" layoutY="14.0" onDragDetected="#backButton2" onMouseClicked="#backButton2" pickOnBounds="true" preserveRatio="true">
             <image>

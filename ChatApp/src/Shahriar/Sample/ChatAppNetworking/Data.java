@@ -1,9 +1,10 @@
-package com.example.assignmentnetworking;
+
+package Shahriar.Sample.ChatAppNetworking;
 
 import java.io.Serializable;
 
 
-public class Data implements Serializable ,Cloneable{
+public class Data implements Serializable,Cloneable{
     
     public String message;           
     

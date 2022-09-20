@@ -1,3 +1,1 @@
-Food: Kabab###Per Price: 190###Quantity: 2###Price: 380
-Food: Chicken Burger###Per Price: 250###Quantity: 3###Price: 750
-Food: Fried Rice set###Per Price: 300###Quantity: 4###Price: 1200
+Food: Pasta###Per Price: 170###Quantity: 2###Price: 340

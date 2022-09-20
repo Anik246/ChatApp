@@ -1,1 +1,1 @@
-Food: Cheese Burger###Per Price: 350###Quantity: 4###Price: 1400
+Food: Chicken Burger###Per Price: 250###Quantity: 2###Price: 500

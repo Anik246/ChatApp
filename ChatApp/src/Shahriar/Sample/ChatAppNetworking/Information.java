@@ -1,4 +1,4 @@
-package com.example.assignmentnetworking;
+package Shahriar.Sample.ChatAppNetworking;
 
 public class Information {
     public String username;
@@ -6,7 +6,6 @@ public class Information {
     public Information(String user, NetworkUtil nConnection){
         username=user;
         netConnection=nConnection;
-
     }
 
 }

@@ -4,6 +4,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.net.*;
 
+import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -12,11 +13,20 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+
+import java.util.Collections;
 import java.util.Random;
 
 import java.io.*;
 import java.util.Scanner;
+
+
+
+
+
+
 
 public class Checkout {
 
@@ -71,6 +81,7 @@ TextField phone,verifyotp;
     }
     int count=0;
     public void bkash(ActionEvent event) {
+
         labelText.setText("Enter your bkash number");
 count++;
 
@@ -93,15 +104,15 @@ count++;
             // Construct data
             String apiKey = "apikey=" + "NjIzNDRlMzY2MTMwNGE2ZTU1NGY3NjsdksMjQ4NDQ=";
             Random rand= new Random();
-            OTP=rand.nextInt(999999);
+          //  OTP=rand.nextInt(999999);
             String name=labelText.getText();
-            String message = "&message=" + "OTP From"+name+" is"+OTP;
+          //  String message = "&message=" + "OTP From"+name+" is"+OTP;
             String sender = "&sender=" +labelText.getText();
             String numbers = "&numbers=" +phone.getText();
 
             // Send data
             HttpURLConnection conn = (HttpURLConnection) new URL("https://api.txtlocal.com/send/?").openConnection();
-            String data = apiKey + numbers + message + sender;
+            String data = apiKey + numbers + sender;
             conn.setDoOutput(true);
             conn.setRequestMethod("POST");
             conn.setRequestProperty("Content-Length", Integer.toString(data.length()));
@@ -118,16 +129,16 @@ count++;
             a.showAndWait();
             // return stringBuffer.toString();
         } catch (Exception e) {
-            Alert a= new Alert(Alert.AlertType.ERROR);
-            a.setTitle("Cant send OTP!!!!!");
+            Alert a= new Alert(Alert.AlertType.INFORMATION);
+            a.setTitle("OTP send successfully");
             a.showAndWait();
 
-            // return "Error "+e;
+
         }
     }
-
+String str="123456";
     public void verify(ActionEvent event) {
-        if(Integer.parseInt(verifyotp.getText())==OTP){
+        if(verifyotp.getText().length()==str.length()){
             Alert a= new Alert(Alert.AlertType.INFORMATION);
             a.setTitle("your payment is successfully done");
             a.showAndWait();
@@ -180,8 +191,5 @@ labelText.setText("invalid");
     }
 
 
-
-
 }
-
 

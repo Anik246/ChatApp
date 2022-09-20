@@ -78,8 +78,8 @@ public class Signup3 {
             try {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("checkout.fxml"));
                 parent = loader.load();
-               // Checkout c = loader.getController();
-               // c.initialize(client,userlabel,finalprice);
+               Checkout c = loader.getController();
+               c.initialize(client,userlabel,finalprice);
 
 
                 stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();

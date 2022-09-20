@@ -1,8 +1,0 @@
-3,3,3,3
-,,,
-2,2,2,2
-2,2,2,2
-Satarkul,40-3,01759099000,Infront of United International University
-Satarkul,40-3,01759099000,Infront of United International University
-Satarkul,14-C,01759099000,
-y,01324233,w,

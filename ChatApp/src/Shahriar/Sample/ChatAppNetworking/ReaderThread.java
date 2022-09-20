@@ -1,11 +1,12 @@
 
-package com.example.assignmentnetworking;
+package Shahriar.Sample.ChatAppNetworking;
 
-public class Reader implements Runnable{
+
+public class ReaderThread implements Runnable{
     public NetworkUtil netConnection;
     String msg="";
     public static boolean check = false;
-    public Reader(NetworkUtil nc){
+    public ReaderThread(NetworkUtil nc){
         netConnection=nc;
     }
     public void setMessage(String msg){
@@ -13,7 +14,7 @@ public class Reader implements Runnable{
     }
     public void StartThread(){
         new Thread(this).start();
-
+        //this.start();
     }
     public String getMessage() {
         if(msg!=null)
@@ -28,14 +29,15 @@ public class Reader implements Runnable{
             String msg;
             Object obj=netConnection.read();
             msg = (String) obj;
-
+            //Data dataObj=(Data)obj;
             if(!getMessage().equals(msg));
             {
                 setMessage(msg);
                 System.out.println("Received : "+msg);
                 check = false;
             }
-
+//
+//            }
             
         }
     }
